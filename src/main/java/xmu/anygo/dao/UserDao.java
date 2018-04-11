@@ -7,11 +7,11 @@ import xmu.anygo.model.User;
 public interface UserDao {
     String TABLE_NAME="user";
     String INSERT_FIELDS="Name,ID_Number,Phone,Visitor,Account,Password,Professional_Guide," +
-            "Location,Credit_Score,Service_Score,Salary_UpperBound,Salary_LowerBound,Information";
+            "Location,Credit_Score,Service_Score,Salary_UpperBound,Salary_LowerBound,Information,Image";
     String SELECT_FIELDS="ID,"+INSERT_FIELDS;
 
     @Insert({"insert into",TABLE_NAME,"(",INSERT_FIELDS,") values(#{name},#{idNumber},#{phone},#{visitor},#{account},#{password},#{professionalGuide})" +
-            "#{location},#{creditScore},#{serviceScore},#{salaryUpperBound},#{salaryLowerBound},#{information}"})
+            "#{location},#{creditScore},#{serviceScore},#{salaryUpperBound},#{salaryLowerBound},#{information},#{image}"})
     public void insertUser(User user);
 
     @Select({"select",SELECT_FIELDS,"from",TABLE_NAME,"where ID=#{id}"})

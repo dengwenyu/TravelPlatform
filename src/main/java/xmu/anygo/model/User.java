@@ -15,6 +15,7 @@ public class User {
     private int salaryUpperBound;
     private int salaryLowerBound;
     private String information;
+    private String image;
 
     public User() {
     }
@@ -129,5 +130,13 @@ public class User {
 
     public void setInformation(String information) {
         this.information = information;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
